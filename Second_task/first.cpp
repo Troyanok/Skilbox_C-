@@ -14,10 +14,6 @@ int main()
 
     for (int i = 0; i < 4; i++)
     {
-        countExitPassenger = 0;
-        countComePassenger = 0;
-        nameStation = "";
-
         cout << "Прибываем на остановку: ";
         cin >> nameStation;
 
