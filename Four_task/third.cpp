@@ -7,7 +7,7 @@ using namespace std;
 const int COUNT_WEEK_DAY {7};
 const int COUNT_MONTH {12};
 
-std::array<int, countMonth> monthCountDay = 
+std::array<int, COUNT_MONTH> monthCountDay = 
 {
         31,
         28,
