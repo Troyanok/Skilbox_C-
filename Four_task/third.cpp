@@ -74,7 +74,6 @@ int main()
         }
 
         int checkDay = ((beginMonth - 1) + (numDay - 1)) % COUNT_WEEK_DAY;
-	cout << checkDay << endl;
 
 	if ((checkDay == 5) || (checkDay == 6))
         {
