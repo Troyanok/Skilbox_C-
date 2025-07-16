@@ -73,6 +73,7 @@ int main()
         if ((numDay > countDay) || (numDay < 0))
         {
                 cout << "День месяца был введён неверно!" << endl;
+		return -1;
         }
 
         int checkDay = ((beginMonth - 1) + (numDay - 1)) % 7;
