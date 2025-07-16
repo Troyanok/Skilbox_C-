@@ -4,9 +4,8 @@
 
 using namespace std;
 
-
-const int countWeekDay {7};
-const int countMonth {12};
+const int COUNT_WEEK_DAY {7};
+const int COUNT_MONTH {12};
 
 std::array<int, countMonth> monthCountDay = 
 {
@@ -23,8 +22,7 @@ std::array<int, countMonth> monthCountDay =
         30,
         31
 };
-
-        
+ 
 int main()
 {
         int yearInfo, numMonth, beginMonth, numDay;
@@ -55,14 +53,13 @@ int main()
                 monthCountDay[1] = 29;
         }
 
-
-        if ((numMonth > countMonth) || (numMonth < 0))
+        if ((numMonth > COUNT_MONTH) || (numMonth < 0))
         {
                 cout << "Введённого пользователем месяца не существует!"<< endl;
         return -1;
         }
 
-        if ((beginMonth > countWeekDay) || (beginMonth < 0))
+        if ((beginMonth > COUNT_WEEK_DAY) || (beginMonth < 0))
         {
                 cout << "Неправильное начало месяца!" << endl;
                 return -1;
@@ -76,7 +73,7 @@ int main()
 		return -1;
         }
 
-        int checkDay = ((beginMonth - 1) + (numDay - 1)) % 7;
+        int checkDay = ((beginMonth - 1) + (numDay - 1)) % COUNT_WEEK_DAY;
 	cout << checkDay << endl;
 
 	if ((checkDay == 5) || (checkDay == 6))
