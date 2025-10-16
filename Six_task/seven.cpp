@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
     int bacteria, antibioticDrops;
@@ -10,7 +12,7 @@ int main()
     cout << "Введите количество антибиотика: ";
     cin >> antibioticDrops;
     
-    if (bacteria <= 0 || antibioticDrops < 0)
+    if ((bacteria <= 0) || (antibioticDrops < 0))
     {
         cout << "Ошибка: введены некорректные данные!" << endl;
         return 1;
@@ -20,7 +22,7 @@ int main()
     int currentBacteria = bacteria;
     int antibioticEffect = 10; 
     
-    while (currentBacteria > 0 && antibioticDrops > 0 && antibioticEffect > 0)
+    while ((currentBacteria > 0) && (antibioticDrops > 0) && (antibioticEffect > 0))
     {
         currentBacteria *= 2;
         
