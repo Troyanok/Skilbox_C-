@@ -4,32 +4,29 @@ using namespace std;
 
 int main()
 {
-    int day;
+	int numDay;
 
-    cout << "Введите число: ";
-    cin >> day;
-    
-    if (( day < 1 ) || ( day > 31 ))
-    {
-        cout << "Некорректная дата" << endl;
-        return 1;
-    }
-    
-    int dayOfWeek = (day - 1) % 7 + 1; // 1 - понедельник, 7 - воскресенье
-    
-    if ((day >= 1 && day <= 5) || (day >= 8 && day <= 10))
-    {
-        cout << "выходной" << endl;
-    }
-    else if ( dayOfWeek == 6 || dayOfWeek == 7)
-    {
-        
-    }
-    else
-    {
-        cout << "рабочий" << endl;
-    }
-        
+	cout << "Введите число: ";
+	cin >> numDay;
 
-    return 0;
+	if ((numDay < 0) || (numDay > 31))
+	{
+		cout << "День месяца был введён неверно!" << endl;
+		return -1;
+	}
+
+	int dayWeek = (numDay - 1) % 7;
+	bool checkWeekend = ((dayWeek == 5) || (dayWeek == 6));
+
+	if (((numDay >= 1) && (numDay <= 5)) || ((numDay >= 8) && (numDay <= 10)) || checkWeekend)
+	{
+		cout << "Выходной, ура!" << endl;
+	}
+	else
+	{
+		cout << "Работаем ... " << endl;
+	}
+
+	return 0;
 }
+
