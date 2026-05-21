@@ -45,16 +45,16 @@ bool IsEmptyMatrix(const bool matrix[MATRIX_SIZE][MATRIX_SIZE])
 
 void PopArea(bool matrix[MATRIX_SIZE][MATRIX_SIZE], int col1, int col2, int line1, int line2)
 {
-    if ((col1 < 0) || (col1 > MATRIX_SIZE) || (col2 < 0) || (col2 > MATRIX_SIZE) ||
-        (line1 < 0) || (line1 > MATRIX_SIZE) || (line2 < 0) || (line2 > MATRIX_SIZE))
+    if ((col1 < 0) || (col1 >= MATRIX_SIZE) || (col2 < 0) || (col2 >= MATRIX_SIZE) ||
+        (line1 < 0) || (line1 >= MATRIX_SIZE) || (line2 < 0) || (line2 >= MATRIX_SIZE))
     {
         cout << "Пользователь ввёл ошибочные координаты!" << endl;
         return;
     }
     
-    for (int i = col1; i < col2; i++)
+    for (int i = col1; i <= col2; i++)   // включая правую границу
     {
-        for (int j = line1; j < line2; j++)
+        for (int j = line1; j <= line2; j++)
         {
             if (matrix[i][j])
             {
