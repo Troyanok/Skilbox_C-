@@ -4,9 +4,10 @@ using namespace std;
 const int COLUMNS_SIZE { 3 };
 const int LINES_SIZE { 3 };
 
-char gameField[COLUMNS_SIZE][LINES_SIZE] {{'-', '-', '-'},
-                                          {'-', '-', '-'},
-                                          {'-', '-', '-'}};
+char gameField[COLUMNS_SIZE][LINES_SIZE] {{' ', ' ', ' '},
+                                          {' ', ' ', ' '},
+                                          {' ', ' ', ' '}};
+
 void PrintGameField()
 {
     cout << "Game Field" << endl;
@@ -23,7 +24,7 @@ void PrintGameField()
 
 bool CheckInputArgs(int row, int col)
 {
-    return ((row >= 0) && (row < LINES_SIZE) && (col >= 0) && (col < COLUMNS_SIZE) && (gameField[row][col] == '-'));
+    return ((row >= 0) && (row < LINES_SIZE) && (col >= 0) && (col < COLUMNS_SIZE) && (gameField[row][col] == ' '));
 }
 
 char CheckField()
@@ -31,7 +32,7 @@ char CheckField()
     // Горизонтали
     for (int i = 0; i < LINES_SIZE; i++)
     {
-        if ((gameField[i][0] != '-') && (gameField[i][0] == gameField[i][1]) && (gameField[i][1] == gameField[i][2]))
+        if ((gameField[i][0] != ' ') && (gameField[i][0] == gameField[i][1]) && (gameField[i][1] == gameField[i][2]))
         {
             return gameField[i][0];
         }
@@ -40,7 +41,7 @@ char CheckField()
     // Вертикали
     for (int j = 0; j < COLUMNS_SIZE; j++)
     {
-        if ((gameField[0][j] != '-') && (gameField[0][j] == gameField[1][j]) && (gameField[1][j] == gameField[2][j]))
+        if ((gameField[0][j] != ' ') && (gameField[0][j] == gameField[1][j]) && (gameField[1][j] == gameField[2][j]))
         {
             return gameField[0][j];
         }
@@ -52,7 +53,7 @@ char CheckField()
     {
         for (int j = 0; j < COLUMNS_SIZE; j++)
         {
-            if (gameField[i][j] == '-')
+            if (gameField[i][j] == ' ')
             {
                 isFull = false;
             }
