@@ -3,15 +3,15 @@
 using namespace std; 
  
 const int COLUMNS_SIZE { 2 };
-const int LINES_SIZES { 6 };
+const int LINES_SIZE { 6 };
 
 /// @brief Массив столовых приборов
-int tableAppliancePackage[COLUMNS_SIZE][LINES_SIZE] {{4, 3, 3, 3, 3, 3}, 
-											 		 {4, 3, 3, 3, 3, 3}};
+int tableAppliancePackage[COLUMNS_SIZE][LINES_SIZE] {{4, 4, 3, 3, 3, 3}, 
+											         {3, 3, 3, 3, 3, 3}};
 
 /// @brief Массив тарелок
-int platePackage[COLUMNS_SIZE][LINES_SIZE] {{3, 2, 2, 2, 2, 2}, 
-							    			{3, 2, 2, 2, 2, 2}};
+int platePackage[COLUMNS_SIZE][LINES_SIZE] {{3, 3, 2, 2, 2, 2}, 
+							    			{2, 2, 2, 2, 2, 2}};
 
 /// @brief Массив стульев
 int chairPackage[COLUMNS_SIZE][LINES_SIZE] {{1, 1, 1, 1, 1, 1},
@@ -26,7 +26,8 @@ void PrintBanquetInfo()
 		for (int j = 0; j < LINES_SIZE; j++)
 		{
 			guestNum++;
-			cout << ((j == 0) ? "Vip guest" : "Base guest") << endl;
+			// VIP – первые два места первого ряда
+			cout << ((i == 0 && (j == 0 || j == 1)) ? "Vip guest" : "Base guest") << endl;
 			cout << "Info about guest " << guestNum << endl;
 			cout << "Appliance count: " << tableAppliancePackage[i][j] << 
 			" \t Plate count: " << platePackage[i][j] <<
