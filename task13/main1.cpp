@@ -6,13 +6,16 @@ const int column { 2 };
 const int line { 6 };
 
 /// @brief Массив столовых приборов
-int tableAppliancePackage[column][line] {{4, 3, 3, 3, 3, 3}, {4, 3, 3, 3, 3, 3}};
+int tableAppliancePackage[column][line] {{4, 3, 3, 3, 3, 3}, 
+										 {4, 3, 3, 3, 3, 3}};
 
 /// @brief Массив тарелок
-int platePackage[column][line] {{3, 2, 2, 2, 2, 2}, {3, 2, 2, 2, 2, 2}};
+int platePackage[column][line] {{3, 2, 2, 2, 2, 2}, 
+							    {3, 2, 2, 2, 2, 2}};
 
 /// @brief Массив стульев
-int chairPackage[column][line] {{1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1}};
+int chairPackage[column][line] {{1, 1, 1, 1, 1, 1},
+								{1, 1, 1, 1, 1, 1}};
 
 /// @brief Вывести текущую информацию о гостях
 void PrintBanquetInfo()
