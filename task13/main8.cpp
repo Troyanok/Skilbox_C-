@@ -40,8 +40,8 @@ void PrintField(const bool field[MATRIX_SIZE][MATRIX_SIZE])
 bool CanPlaceShip(const bool field[MATRIX_SIZE][MATRIX_SIZE],
                   int col1, int line1, int col2, int line2)
 {
-    if ((col1 < 0)  || (col1 > MATRIX_SIZE)  || (col2 < 0)  || (col2 > MATRIX_SIZE) ||
-        (line1 < 0) || (line1 > MATRIX_SIZE) || (line2 < 0) || (line2 > MATRIX_SIZE))
+    if ((col1 < 0)  || (col1 >= MATRIX_SIZE)  || (col2 < 0)  || (col2 >= MATRIX_SIZE) ||
+        (line1 < 0) || (line1 >= MATRIX_SIZE) || (line2 < 0) || (line2 >= MATRIX_SIZE))
     {
         return false;
     }
@@ -51,12 +51,16 @@ bool CanPlaceShip(const bool field[MATRIX_SIZE][MATRIX_SIZE],
         return false;
     }
 
-    int diffCol = (col1 < col2) ? 1 : (line1 > line2 ? -1 : 0);
-    int diffLine = (line1 < line2) ? 1 : (col1 > col2 ? -1 : 0);
+    int diffCol = 0, diffLine = 0;
+    if (col1 == col2)           // вертикальный
+        diffLine = (line1 < line2) ? 1 : -1;
+    else                        // горизонтальный
+        diffCol = (col1 < col2) ? 1 : -1;
+
     int col { col1 }, line { line1 };
     while(1)
     {
-        if (field[col][line])
+        if (field[line][col])
         {
             return false;
         }
@@ -73,12 +77,17 @@ bool CanPlaceShip(const bool field[MATRIX_SIZE][MATRIX_SIZE],
 void PlaceShip(bool field[MATRIX_SIZE][MATRIX_SIZE],
                int col1, int line1, int col2, int line2)
 {
-    int diffCol = (col1 < col2) ? 1 : (line1 > line2 ? -1 : 0);
-    int diffLine = (line1 < line2) ? 1 : (col1 > col2 ? -1 : 0);
+    int diffCol = 0, diffLine = 0;
+    if (col1 == col2)
+        diffLine = (line1 < line2) ? 1 : -1;
+    else
+        diffCol = (col1 < col2) ? 1 : -1;
+
     int col { col1 }, line { line1 };
     while(1)
     {
-        field[col][line] = true;if ((col == col2) && (line == line2))
+        field[line][col] = true;
+        if ((col == col2) && (line == line2))
         {
             break;
         }
@@ -98,7 +107,7 @@ void PlaceAllShips(bool field[MATRIX_SIZE][MATRIX_SIZE], int playerNum)
                                   : size == 2 ? "двухпалубный" 
                                   : size == 3 ? "трёхпалубный"
                                   : "четырёхпалубный") 
-                              << "корабль (длина и конец)" << endl;
+                              << " корабль (длина и конец)" << endl;
         while(1)
         {
             cout << "Введите координаты начала и конца: ";
@@ -159,9 +168,9 @@ bool Shoot(bool field[MATRIX_SIZE][MATRIX_SIZE], int col, int line)
         cout << "Координаты введены неверно!" << endl;
         return false;
     }
-    if (field[col][line])
+    if (field[line][col])
     {
-        field[col][line] = false;
+        field[line][col] = false;
         cout << "Попадание!" << endl;
         return true;
     }
@@ -187,7 +196,7 @@ void PlayGame(bool field1[MATRIX_SIZE][MATRIX_SIZE], bool field2[MATRIX_SIZE][MA
 
         if (hit && !HasShip(currentField))
         {
-            cout << "Игрок " << currentPlayer << " уничтожил все коробли и выиграл. " << endl;
+            cout << "Игрок " << currentPlayer << " уничтожил все корабли и выиграл. " << endl;
             break;
         }
         currentPlayer = (currentPlayer == 1) ? 2 : 1;
