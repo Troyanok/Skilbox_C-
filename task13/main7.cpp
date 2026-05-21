@@ -15,7 +15,7 @@ void InputHeight(int heights[LAND_SIZE][LAND_SIZE])
             {
                 cout << "Сектор [" << i << "][" << j << "]: ";
                 cin >> heights[i][j];
-                if ((heights[i][j] > 0) && (heights[i][j] < MAX_HEIGHT))
+                if ((heights[i][j] >= 0) && (heights[i][j] <= MAX_HEIGHT))
                 {
                     break;
                 }
