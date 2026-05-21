@@ -2,28 +2,28 @@
 
 using namespace std; 
  
-const int column { 2 };
-const int line { 6 };
+const int COLUMNS_SIZE { 2 };
+const int LINES_SIZES { 6 };
 
 /// @brief Массив столовых приборов
-int tableAppliancePackage[column][line] {{4, 3, 3, 3, 3, 3}, 
-										 {4, 3, 3, 3, 3, 3}};
+int tableAppliancePackage[COLUMNS_SIZE][LINES_SIZE] {{4, 3, 3, 3, 3, 3}, 
+											 		 {4, 3, 3, 3, 3, 3}};
 
 /// @brief Массив тарелок
-int platePackage[column][line] {{3, 2, 2, 2, 2, 2}, 
-							    {3, 2, 2, 2, 2, 2}};
+int platePackage[COLUMNS_SIZE][LINES_SIZE] {{3, 2, 2, 2, 2, 2}, 
+							    			{3, 2, 2, 2, 2, 2}};
 
 /// @brief Массив стульев
-int chairPackage[column][line] {{1, 1, 1, 1, 1, 1},
-								{1, 1, 1, 1, 1, 1}};
+int chairPackage[COLUMNS_SIZE][LINES_SIZE] {{1, 1, 1, 1, 1, 1},
+											{1, 1, 1, 1, 1, 1}};
 
 /// @brief Вывести текущую информацию о гостях
 void PrintBanquetInfo()
 {
 	int guestNum { 0 };
-	for (int i = 0; i < column; i++)
+	for (int i = 0; i < COLUMNS_SIZE; i++)
 	{
-		for (int j = 0; j < line; j++)
+		for (int j = 0; j < LINES_SIZE; j++)
 		{
 			guestNum++;
 			cout << ((j == 0) ? "Vip guest" : "Base guest") << endl;
