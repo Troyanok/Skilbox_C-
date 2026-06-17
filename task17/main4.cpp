@@ -2,16 +2,18 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 int main()
 {
-    std::string picturePath;
-    std::cout << "Введите путь к картинке: ";
-    std::cin >> picturePath;
+    string picturePath;
+    cout << "Введите путь к картинке: ";
+    cin >> picturePath;
 
-    std::ifstream pngFile(picturePath, std::ios::binary);
+    ifstream pngFile(picturePath, ios::binary);
     if (!pngFile.is_open())
     {
-        std::cout << "Failed to open file: " << picturePath << std::endl;
+        cout << "Failed to open file: " << picturePath << endl;
         return -1;
     }
 
@@ -20,7 +22,7 @@ int main()
     
     if (pngFile.gcount() != sizeof(buffer))
     {
-        std::cout << "Входной файл не является PNG (слишком короткий)" << std::endl;
+        cout << "Входной файл не является PNG (слишком короткий)" << endl;
         return 0;
     }
 
@@ -31,11 +33,11 @@ int main()
 
     if (isPNG)
     {
-        std::cout << "Входной файл является PNG-изображением" << std::endl;
+        cout << "Входной файл является PNG-изображением" << endl;
     }
     else
     {
-        std::cout << "Входной файл не является PNG-изображением" << std::endl;
+        cout << "Входной файл не является PNG-изображением" << endl;
     }
 
     return 0;
