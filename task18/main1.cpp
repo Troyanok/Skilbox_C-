@@ -49,7 +49,7 @@ bool IsValidDate(const string& date)
     }
     catch(const exception& e)
     {
-        cerr << e.what() << endl;
+        cout << e.what() << endl;
         return false;
     }
     
@@ -83,7 +83,7 @@ int main()
     ofstream outFile("payroll.txt", std::ios::app);
     if (!outFile.is_open())
     {
-        cerr << "Не удалось открыть файл для записи." << endl;
+        cout << "Не удалось открыть файл для записи." << endl;
         return -1;
     }
 
