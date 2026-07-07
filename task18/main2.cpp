@@ -16,14 +16,14 @@ int main()
     cin >> height;
     if ((width <= 0) || (height <= 0))
     {
-        cerr << "Размеры должны быть положительными.\n";
+        cout << "Размеры должны быть положительными.\n";
         return -1;
     }
 
     ofstream out("pic.txt");
     if (!out)
     {
-        cerr << "Не удалось создать файл pic.txt\n";
+        cout << "Не удалось создать файл pic.txt\n";
         return -1;
     }
 
