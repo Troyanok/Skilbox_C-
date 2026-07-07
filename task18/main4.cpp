@@ -157,7 +157,7 @@ int main()
     {
         cout << "Выберите действие (+ пополнение, - снятие, q выход): ";
         cin >> command;
-        if (command == "q" || command == "Q")
+        if ((command == "q") || (command == "Q"))
         {
             break;
         }
