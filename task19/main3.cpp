@@ -3,7 +3,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include <cmath>          // <cmath> вместо <math.h>
+#include <cmath>          
 
 using namespace std;
 
