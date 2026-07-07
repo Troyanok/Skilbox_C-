@@ -14,14 +14,14 @@ int main()
     ifstream riverFile("river.txt");
     if (!riverFile)
     {
-        cerr << "Файл river.txt не найден." << endl;
+        cout << "Файл river.txt не найден." << endl;
         return -1;
     }
 
     ofstream basketFile("basket.txt", ios::app);
     if (!basketFile)
     {
-        cerr << "Не удалось открыть basket.txt для записи." << endl;
+        cout << "Не удалось открыть basket.txt для записи." << endl;
         return -1;
     }
 
