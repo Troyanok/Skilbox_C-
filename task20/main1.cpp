@@ -11,8 +11,8 @@ int main()
     map<string, string> phoneToSurname;
     map<string, vector<string>> surnameToPhones;
 
-    string command {};
-    string line {};
+    string command;
+    string line;
 
     cout << "Добро пожаловать в Телефонный справочник" << endl;
     while (1)
