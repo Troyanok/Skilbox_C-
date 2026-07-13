@@ -35,6 +35,7 @@ int main()
 
         if (line.empty())
         {
+            cout << "Введена пустая строка!" << endl;
             continue;
         }
 
