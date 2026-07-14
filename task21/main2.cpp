@@ -16,7 +16,7 @@ struct Friend
         , birthday(0)
     {};
 
-    void set(const string& n, int year, int month, int day)
+    void SetValue(const string& n, int year, int month, int day)
     {
         name = n;
         tm t = {};
@@ -69,7 +69,7 @@ int main()
             }
 
             Friend fr;
-            fr.set(name, year, month, day);
+            fr.SetValue(name, year, month, day);
             friends.push_back(fr);
             cout << "Добавлен: " << name << "." << endl;
         }
