@@ -59,12 +59,12 @@ int main()
                     int remaining = static_cast<int>(difftime(target, now));
                     int m = remaining / 60;
                     int s = remaining % 60;
-                    cout << "\r" << setfill('0') << setw(2) << m
+                    cout << "\t" << setfill('0') << setw(2) << m
                          << ":" << setw(2) << s << flush;
                     last_printed = now;
                 }
             }
-            cout << "\rДЗЫНЬ! ДЗЫНЬ! ДЗЫНЬ! " << endl;
+            cout << "\t ДЗЫНЬ! ДЗЫНЬ! ДЗЫНЬ! " << endl;
         }
         else
         {
