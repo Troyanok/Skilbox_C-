@@ -1,8 +1,9 @@
-cmake_minimum_required(VERSION 3.10)
-project(ComputerSim)
+add_library(computer_lib STATIC
+    ram.cpp
+    cpu.cpp
+    disk.cpp
+    gpu.cpp
+    kbd.cpp
+)
 
-add_subdirectory(src)
-
-add_executable(computer_sim main.cpp)
-
-target_link_libraries(computer_sim PRIVATE computer_lib)
+target_include_directories(computer_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/..)
