@@ -6,6 +6,7 @@ namespace ram_tools
 namespace
 {
 
+/// @brief Буфер оперативной памяти
 int ram_memory[value_constants::MAX_RAM_VALUE] = {};
 
 }
