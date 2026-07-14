@@ -17,13 +17,13 @@ void InputPoint(Point& curPoint);
 
 bool CheckEqualPoints(const Point& first, const Point& second);
 
-void scalpel(const Point& first, const Point& second);
+void ScalpelAction(const Point& first, const Point& second);
 
-void hemostat(const Point& currentPoint);
+void HemostatAction(const Point& currentPoint);
 
-void tweezers(const Point& currentPoint);
+void TweezersAction(const Point& currentPoint);
 
-void suture(const Point& first, const Point& second);
+void SutureAction(const Point& first, const Point& second);
 
 void PrintPoint(const Point& currentPoint);
 
