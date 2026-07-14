@@ -32,7 +32,7 @@ int main()
             surgery_tools::InputPoint(start);
             std::cout << "Введите координаты конца разреза: " << std::endl;
             surgery_tools::InputPoint(end);
-            surgery_tools::scalpel(start, end);
+            surgery_tools::ScalpelAction(start, end);
             if (!operationStarted)
             {
                 scalpelStart = start;
@@ -50,7 +50,7 @@ int main()
             }
             std::cout << "Введите точку для зажима: " << std::endl;
             surgery_tools::InputPoint(p);
-            surgery_tools::hemostat(p);
+            surgery_tools::HemostatAction(p);
         }
         else if (command == "tweezers")
         {
@@ -61,7 +61,7 @@ int main()
             }
             std::cout << "Введите точку для пинцета: " << std::endl;
             surgery_tools::InputPoint(p);
-            surgery_tools::tweezers(p);
+            surgery_tools::TweezersAction(p);
         }
         else if (command == "suture")
         {
@@ -74,7 +74,7 @@ int main()
             surgery_tools::InputPoint(start);
             std::cout << "Введите координаты конца шва: " << std::endl;
             surgery_tools::InputPoint(end);
-            surgery_tools::suture(start, end);
+            surgery_tools::SutureAction(start, end);
 
             if (surgery_tools::CheckEqualPoints(start, scalpelStart) && surgery_tools::CheckEqualPoints(end, scalpelEnd))
             {
