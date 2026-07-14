@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(ComputerSim)
+project(WorkingPCSimulator)
 
 add_subdirectory(src)
 
