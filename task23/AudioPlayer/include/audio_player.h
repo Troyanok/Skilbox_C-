@@ -13,7 +13,7 @@ public:
     AudioPlayer(const std::string& fileName);
 
     /// @brief Деструктор по умолчания
-    ~AudioPlayer() = default;
+    ~AudioPlayer();
 
     /// @brief Воспроизвести трек
     /// @param[in] targetName Имя трека для воспроизведения
