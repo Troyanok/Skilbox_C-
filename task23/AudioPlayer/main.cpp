@@ -5,6 +5,7 @@
 
 int main()
 {
+    std::string trackName;
     std::string fileName;
     std::cout << "Добро пожаловать в аудиоплеер. Введите название файла для получения плейлиста: ";
     std::cin >> fileName;
@@ -30,7 +31,6 @@ int main()
         }
         else if (command == "play")
         {
-            std::string trackName;
             std::cout << "Введите название трека: ";
             std::getline(std::cin, trackName);
             player.PlayTrack(trackName);
