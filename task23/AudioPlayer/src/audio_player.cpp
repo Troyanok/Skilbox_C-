@@ -18,7 +18,14 @@ AudioPlayer::AudioPlayer(const std::string& fileName)
     audioList_ = ReadTracksFromFile(fileName);
     std::cout << "Загруженные треки:\n";
     for (const auto& t : audioList_)
+    {
         std::cout << " - " << t.GetTrackName() << std::endl;
+    }
+}
+
+AudioPlayer::~AudioPlayer()
+{
+    audioList_.clear();
 }
 
 void AudioPlayer::PlayTrack(const std::string& targetName)
