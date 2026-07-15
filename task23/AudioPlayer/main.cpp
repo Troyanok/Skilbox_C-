@@ -14,11 +14,11 @@ int main()
     while (1)
     {
         std::cout << "Введите команду:" << std::endl
-                  << "  play  - Воспроизвести трек" << std::endl
-                  << "  pause - Поставить на паузу" << std::endl
-                  << "  next  - Следующий трек (shuffle)" << std::endl
-                  << "  stop  - Остановить" << std::endl
-                  << "  exit  - Выйти" << std::endl
+                  << "\t play  - Воспроизвести трек" << std::endl
+                  << "\t pause - Поставить на паузу" << std::endl
+                  << "\t next  - Следующий трек (shuffle)" << std::endl
+                  << "\t stop  - Остановить" << std::endl
+                  << "\t exit  - Выйти" << std::endl
                   << ">> ";
         std::cin >> command;
         std::cin.ignore();
