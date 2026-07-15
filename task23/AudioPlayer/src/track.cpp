@@ -17,9 +17,20 @@ Track::Track(const std::string& name, const std::tm& create, int durationSec)
     , durationSec_(durationSec)
 {}
 
-std::string Track::GetTrackName() const { return audioName_; }
-std::tm Track::GetTrackCreationDate() const { return creationDate_; }
-int Track::GetTrackDurationSec() const { return durationSec_; }
+std::string Track::GetTrackName() const
+{
+    return audioName_;
+}
+
+std::tm Track::GetTrackCreationDate() const
+{
+    return creationDate_;
+}
+
+int Track::GetTrackDurationSec() const
+{
+    return durationSec_;
+}
 
 void Track::PrintTrackData() const
 {
