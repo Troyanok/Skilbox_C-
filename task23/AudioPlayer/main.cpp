@@ -11,14 +11,14 @@ int main()
     AudioPlayer player(fileName);
 
     std::string command;
-    while (true)
+    while (1)
     {
-        std::cout << "\nВведите команду:\n"
-                  << "  play  - Воспроизвести трек\n"
-                  << "  pause - Поставить на паузу\n"
-                  << "  next  - Следующий трек (shuffle)\n"
-                  << "  stop  - Остановить\n"
-                  << "  exit  - Выйти\n"
+        std::cout << "Введите команду:" << std::endl
+                  << "  play  - Воспроизвести трек" << std::endl
+                  << "  pause - Поставить на паузу" << std::endl
+                  << "  next  - Следующий трек (shuffle)" << std::endl
+                  << "  stop  - Остановить" << std::endl
+                  << "  exit  - Выйти" << std::endl
                   << ">> ";
         std::cin >> command;
         std::cin.ignore();
@@ -51,6 +51,8 @@ int main()
         {
             std::cout << "Неизвестная команда. Попробуйте снова." << std::endl;
         }
+
+        std::cout << std::endl;
     }
     return 0;
 }
