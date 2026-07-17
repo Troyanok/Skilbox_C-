@@ -23,3 +23,25 @@
 - `next()` – переключиться на случайный трек из списка (shuffle). Начинает воспроизведение выбранного трека, останавливая предыдущее, если оно было.
 - `stop()` – полностью остановить воспроизведение. Сброс всех флагов, информация о треке не сохраняется.
 - `exit()` – завершить программу.
+
+
+## Файлы проекта
+```bash
+ComputerSim/
+├── include/
+│ └── audio_player.h
+│ └── track.h
+├── src/
+│ └── audio_player.cpp
+│ └── track.cpp
+│ └── CMakeLists.txt
+├── main.cpp 
+├── CMakeLists.txt
+└── README.md
+```
+
+## Сборка проекта
+mkdir build && cd build \
+cmake .. \
+make \
+./audio_sim 
