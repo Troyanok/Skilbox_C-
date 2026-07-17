@@ -1,10 +1,80 @@
-#include <iostream>
-#include <string>
-#include <cctype>
+#include <include/phone.h>
 
-using namespace std;
+#include <iostream>
+#include <regex>
+
+namespace
+{
+
+/// @brief Проверить строку на корректность телефонного номера
+/// @param s СТрока, которую надо проверить на корректность
+/// @return true - введённая строка номер телефона, иначе - false
+bool IsValidPhone(const std::string& s)
+{
+    static const std::regex pattern(R"(^\+7\d{10}$)");
+    return std::regex_match(s, pattern);
+}
+
+}
 
 int main()
 {
+    std::string command;
+    std::string phoneNum;
+    std::string name;
+    std::cout << "Добро пожаловать в симулятор телефона" << std::endl;
+
+    PhoneSim phone;
+
+    while(1)
+    {
+        std::cout << "Введите команду: " << std::endl
+                  << "\t add - добавить телефон и имя в адресную книгу" << std::endl
+                  << "\t call - позвонить по номеру телефона или имени в адресной книге" << std::endl
+                  << "\t sms - отправить смс по номеру телефона или имени в адресной книге" << std::endl
+                  << "\t exit - завершить работу приложения" << std::endl
+                  << ">> ";
+        std::cin >> command;
+        std::cin.ignore();
+
+        if (command == "exit")
+        {
+            std::cout << "Завершение работы симулятора телефона." << std::endl;
+            break;
+        }
+        else if (command == "add")
+        {
+            std::cout << "Введите номер телефона: ";
+            getline(std::cin, phoneNum);
+            if (!IsValidPhone(phoneNum))
+            {
+                std::cout << "Введённый номер некорректный!" << std::endl;
+                std::cout << std::endl;
+                continue;
+            }
+            std::cout << "Введите имя пользователя: ";
+            getline(std::cin, name);
+
+            phone.AddPhone(phoneNum, name);
+        }
+        else if (command == "call")
+        {
+            std::cout << "Введите номер телефона или имя пользователя: ";
+            getline(std::cin, phoneNum);
+            phone.CallPhone(phoneNum);
+        }
+        else if (command == "sms")
+        {
+            std::cout << "Введите номер телефона или имя пользователя: ";
+            getline(std::cin, phoneNum);
+            phone.WriteSms(phoneNum);
+        }
+        else
+        {
+            std::cout << "Неизвестная команда. Попробуйте снова." << std::endl;
+        }
+
+        std::cout << std::endl;
+    }
     return 0;
 }
