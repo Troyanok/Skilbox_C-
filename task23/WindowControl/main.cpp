@@ -1,10 +1,14 @@
-#include <iostream>
-#include <string>
-#include <cctype>
+#include <include/screen.h>
 
-using namespace std;
+#include <iostream>
 
 int main()
 {
+    Screen winScreen;
+
+    winScreen.GetUserWindowParams();
+
+    winScreen.WorkScreenCommand();
+
     return 0;
 }
