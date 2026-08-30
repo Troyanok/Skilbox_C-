@@ -1,0 +1,6 @@
+
+circle 0 0 5 red
+square 1 1 4 blue
+triangle 2 2 3 green
+rectangle 3 3 6 2 red
+exit
