@@ -34,7 +34,7 @@ void Branch::PrintTree(int level) const
     {
         std::cout << " - " << elfName_;
     }
-    std::cout << "\n";
+    std::cout << std::endl;
     for (const Branch* child : children_)
     {
         child->PrintTree(level + 1);
