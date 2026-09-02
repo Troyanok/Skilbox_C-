@@ -1,0 +1,6 @@
+John 2.5
+Mike 2.0
+Anna 3.0
+Tom 1.8
+Lena 2.2
+Bob 1.5
