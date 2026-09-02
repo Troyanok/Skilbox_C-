@@ -1,6 +1,9 @@
 #include <include/station.h>
 #include <iostream>
 
+Station::Station() : occupied_(false)
+{}
+
 void Station::Arrive(const std::string& trainName)
 {
     std::unique_lock<std::mutex> lock(mtx_);
