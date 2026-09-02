@@ -35,5 +35,5 @@ private:
     std::condition_variable cvArrive_;
     std::condition_variable cvDepart_;
     std::string currentTrain_;
-    bool occupied_ = false;
+    bool occupied_;
 };
