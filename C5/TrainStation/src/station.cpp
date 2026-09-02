@@ -25,6 +25,7 @@ void Station::Depart(const std::string& trainName)
         occupied_ = false;
         currentTrain_.clear();
         cvArrive_.notify_all();
+        cvDepart_.notify_all();
     }
 }
 
