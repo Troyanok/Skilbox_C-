@@ -1,35 +1,47 @@
-#include <include/train.h>
 #include <include/station.h>
 #include <iostream>
-#include <chrono>
 
-Train::Train(const std::string& name, int travelTime, Station* station)
-    : name_(name)
-    , travelTime_(travelTime)
-    , station_(station)
-    , visitedStation_(false)
-{}
-
-void Train::Start()
+void Station::Arrive(const std::string& trainName)
 {
-    thread_ = std::thread(&Train::Run, this);
+    std::unique_lock<std::mutex> lock(mtx_);
+    cvArrive_.wait(lock, [this]
+    {
+        return !occupied_;
+    });
+    occupied_ = true;
+    currentTrain_ = trainName;
+    std::cout << "Train " << trainName << " is at the station." << std::endl;
+    cvDepart_.notify_all();
 }
 
-void Train::Join()
+void Station::Depart(const std::string& trainName)
 {
-    if (thread_.joinable())
+    std::lock_guard<std::mutex> lock(mtx_);
+    if (currentTrain_ == trainName)
     {
-        thread_.join();
+        occupied_ = false;
+        currentTrain_.clear();
+        cvArrive_.notify_all();
     }
 }
 
-void Train::Run()
+bool Station::IsOccupied() const
 {
-    std::this_thread::sleep_for(std::chrono::seconds(travelTime_));
-    std::cout << "Train " << name_ << " arrived at station.\n";
-    station_->Arrive(name_);
-    visitedStation_ = true;
-    station_->WaitForDepartCommand();
-    std::cout << "Train " << name_ << " departed from station.\n";
-    station_->Depart(name_);
+    std::lock_guard<std::mutex> lock(mtx_);
+    return occupied_;
+}
+
+std::string Station::GetCurrentTrain() const
+{
+    std::lock_guard<std::mutex> lock(mtx_);
+    return currentTrain_;
+}
+
+void Station::WaitForDepartCommand()
+{
+    std::unique_lock<std::mutex> lock(mtx_);
+    cvDepart_.wait(lock, [this]
+    {
+        return currentTrain_.empty();
+    });
 }
