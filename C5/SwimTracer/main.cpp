@@ -45,8 +45,8 @@ int main()
     std::cout << "\nFinal results:\n";
     for (const auto* s : swimmers)
     {
-        std::cout << s->GetName() << ": " << std::fixed << std::setprecision(2)
-                  << s->GetTime() << " s\n";
+        std::cout << s->GetName() << ": " << "\t"
+                  << s->GetTime() << " s" << std::endl;
     }
 
     for (auto* s : swimmers)
