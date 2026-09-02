@@ -26,10 +26,10 @@ void Train::Join()
 void Train::Run()
 {
     std::this_thread::sleep_for(std::chrono::seconds(travelTime_));
-    std::cout << "Train " << name_ << " arrived at station.\n";
+    std::cout << "Train " << name_ << " arrived at station." << std::endl;;
     station_->Arrive(name_);
     visitedStation_ = true;
     station_->WaitForDepartCommand();
-    std::cout << "Train " << name_ << " departed from station.\n";
+    std::cout << "Train " << name_ << " departed from station." << std::endl;
     station_->Depart(name_);
 }
