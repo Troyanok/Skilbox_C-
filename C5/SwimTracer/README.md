@@ -12,7 +12,7 @@ SwimRace/
 │   └── CMakeLists.txt
 ├── main.cpp
 ├── CMakeLists.txt
-├── test_cases.txt
+├── test.txt
 └── README.md
 ```
 
