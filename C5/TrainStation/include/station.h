@@ -9,7 +9,7 @@ class Station
 {
 public:
     /// @brief Конструктор по умолчанию
-    Station() = default;
+    Station();
 
     /// @brief Прибытие поезда на станцию
     /// @param trainName Имя прибывающего поезда
