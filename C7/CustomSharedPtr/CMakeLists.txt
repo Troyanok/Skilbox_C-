@@ -1,1 +1,11 @@
+cmake_minimum_required(VERSION 3.10)
+project(CustomSharedPtr)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+include_directories(${CMAKE_SOURCE_DIR})
+
+add_subdirectory(src)
+add_executable(custom_shared_ptr main.cpp)
+target_link_libraries(custom_shared_ptr custom_shared_ptr_lib)
