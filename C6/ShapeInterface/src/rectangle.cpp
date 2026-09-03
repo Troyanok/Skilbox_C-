@@ -2,7 +2,8 @@
 #include <stdexcept>
 
 Rectangle::Rectangle(double width, double height)
-    : width_(width), height_(height)
+    : width_(width)
+    , height_(height)
 {
     if ((width_ <= 0.0) || (height_ <= 0.0))
     {
