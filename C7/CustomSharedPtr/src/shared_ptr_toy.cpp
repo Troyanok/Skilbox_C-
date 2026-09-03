@@ -1,6 +1,8 @@
 #include <include/shared_ptr_toy.h>
 
-shared_ptr_toy::shared_ptr_toy() : toy_(nullptr), refCount_(nullptr)
+shared_ptr_toy::shared_ptr_toy() 
+    : toy_(nullptr)
+    , refCount_(nullptr)
 {}
 
 shared_ptr_toy::shared_ptr_toy(const std::string& name)
