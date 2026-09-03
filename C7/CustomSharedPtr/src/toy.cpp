@@ -1,7 +1,8 @@
 #include <include/toy.h>
 
 Toy::Toy(const std::string& name) : name_(name)
-{}
+{
+}
 
 Toy::~Toy()
 {
