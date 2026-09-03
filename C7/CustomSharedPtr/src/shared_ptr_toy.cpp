@@ -12,7 +12,8 @@ shared_ptr_toy::shared_ptr_toy(const std::string& name)
 }
 
 shared_ptr_toy::shared_ptr_toy(const shared_ptr_toy& other)
-    : toy_(other.toy_), refCount_(other.refCount_)
+    : toy_(other.toy_)
+    , refCount_(other.refCount_)
 {
     if (refCount_ != nullptr)
     {
