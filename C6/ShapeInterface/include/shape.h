@@ -28,7 +28,3 @@ public:
     /// @return Название типа
     virtual std::string Type() const = 0;
 };
-
-/// @brief Выводит параметры фигуры: тип, площадь, размеры описывающего прямоугольника
-/// @param shape Указатель на объект фигуры
-void PrintParams(Shape* shape);
