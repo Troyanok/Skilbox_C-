@@ -9,23 +9,14 @@ class Toy
 public:
     /// @brief Конструктор
     /// @param name Имя игрушки
-    Toy(const std::string& name)
-    {
-        name_ = name;
-    }
+    Toy(const std::string& name);
 
     /// @brief Деструктор Выводит сообщение об удалении
-    ~Toy()
-    {
-        std::cout << "Toy " << name_ << " was dropped" << std::endl;
-    }
+    ~Toy();
 
     /// @brief Возвращает имя игрушки
     /// @return Имя
-    std::string GetName() const
-    {
-        return name_;
-    }
+    std::string GetName() const;
 
 private:
     std::string name_; ///< Имя
