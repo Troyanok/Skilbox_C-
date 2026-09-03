@@ -6,7 +6,7 @@
 class Swimming : public Talent
 {
 public:
-    /// @brief Возвращает название таланта.
+    /// @brief Возвращает название таланта
     /// @return Строка "Swim"
     std::string GetTalentName() const override
     {
