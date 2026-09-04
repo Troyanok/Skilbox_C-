@@ -13,9 +13,9 @@ public:
         : QWidget(parent)
      {
         setFixedSize(200, 200);
-        mGreenCircle = QPixmap("/home/troya/Desktop/Prog/skill/3.png");
-        mYellowCircle = QPixmap("/home/troya/Desktop/Prog/skill/2.png");
-        mRedCircle = QPixmap("/home/troya/Desktop/Prog/skill/1.png");
+        mGreenCircle = QPixmap("/D1/3.png");
+        mYellowCircle = QPixmap("/D1/2.png");
+        mRedCircle = QPixmap("/D1/1.png");
         mCurrentCircle = mRedCircle;
     }
 
