@@ -1,0 +1,3 @@
+add_library(movie_database_lib STATIC movie_database.cpp)
+target_include_directories(movie_database_lib PUBLIC ${CMAKE_SOURCE_DIR})
+target_link_libraries(movie_database_lib PUBLIC nlohmann_json::nlohmann_json)
