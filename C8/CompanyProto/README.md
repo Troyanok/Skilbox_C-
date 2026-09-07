@@ -1,10 +1,5 @@
-#include <iostream>
-#include <string>
-#include <cctype>
+#Модель данных компании на Protobuf
 
-using namespace std;
-
-int main()
-{
-    return 0;
-}
+Прото-файл с описанием модели предприятия. Для генерации C++ кода выполните:
+```bash
+protoc --cpp_out=generated proto/company.proto
