@@ -1,0 +1,152 @@
+{
+  "Interstellar": {
+    "country": "USA, UK, Canada",
+    "release_date": "2014-10-26",
+    "studio": "Paramount Pictures, Warner Bros. Pictures, Legendary Entertainment, Syncopy",
+    "screenwriter": "Jonathan Nolan, Christopher Nolan",
+    "director": "Christopher Nolan",
+    "producer": "Emma Thomas, Christopher Nolan, Lynda Obst",
+    "cast": [
+      {
+        "character": "Cooper",
+        "actor": "Matthew McConaughey"
+      },
+      {
+        "character": "Brand",
+        "actor": "Anne Hathaway"
+      },
+      {
+        "character": "Murph",
+        "actor": "Jessica Chastain"
+      },
+      {
+        "character": "Mann",
+        "actor": "Matt Damon"
+      },
+      {
+        "character": "TARS (voice)",
+        "actor": "Bill Irwin"
+      }
+    ]
+  },
+  "Inception": {
+    "country": "USA, UK",
+    "release_date": "2010-07-16",
+    "studio": "Warner Bros. Pictures, Legendary Entertainment, Syncopy",
+    "screenwriter": "Christopher Nolan",
+    "director": "Christopher Nolan",
+    "producer": "Emma Thomas, Christopher Nolan",
+    "cast": [
+      {
+        "character": "Cobb",
+        "actor": "Leonardo DiCaprio"
+      },
+      {
+        "character": "Arthur",
+        "actor": "Joseph Gordon-Levitt"
+      },
+      {
+        "character": "Ariadne",
+        "actor": "Elliot Page"
+      },
+      {
+        "character": "Eames",
+        "actor": "Tom Hardy"
+      },
+      {
+        "character": "Saito",
+        "actor": "Ken Watanabe"
+      }
+    ]
+  },
+  "The Dark Knight": {
+    "country": "USA, UK",
+    "release_date": "2008-07-18",
+    "studio": "Warner Bros. Pictures, Legendary Entertainment, Syncopy",
+    "screenwriter": "Jonathan Nolan, Christopher Nolan, David S. Goyer",
+    "director": "Christopher Nolan",
+    "producer": "Emma Thomas, Charles Roven, Christopher Nolan",
+    "cast": [
+      {
+        "character": "Bruce Wayne / Batman",
+        "actor": "Christian Bale"
+      },
+      {
+        "character": "Joker",
+        "actor": "Heath Ledger"
+      },
+      {
+        "character": "Harvey Dent",
+        "actor": "Aaron Eckhart"
+      },
+      {
+        "character": "Alfred Pennyworth",
+        "actor": "Michael Caine"
+      },
+      {
+        "character": "Rachel Dawes",
+        "actor": "Maggie Gyllenhaal"
+      }
+    ]
+  },
+  "The Prestige": {
+    "country": "USA, UK",
+    "release_date": "2006-10-20",
+    "studio": "Touchstone Pictures, Warner Bros. Pictures, Newmarket Films",
+    "screenwriter": "Jonathan Nolan, Christopher Nolan",
+    "director": "Christopher Nolan",
+    "producer": "Emma Thomas, Aaron Ryder, Christopher Nolan",
+    "cast": [
+      {
+        "character": "Robert Angier",
+        "actor": "Hugh Jackman"
+      },
+      {
+        "character": "Alfred Borden",
+        "actor": "Christian Bale"
+      },
+      {
+        "character": "Cutter",
+        "actor": "Michael Caine"
+      },
+      {
+        "character": "Olivia Wenscombe",
+        "actor": "Scarlett Johansson"
+      },
+      {
+        "character": "Nikola Tesla",
+        "actor": "David Bowie"
+      }
+    ]
+  },
+  "Dunkirk": {
+    "country": "UK, USA, France, Netherlands",
+    "release_date": "2017-07-21",
+    "studio": "Warner Bros. Pictures, Syncopy, RatPac-Dune Entertainment",
+    "screenwriter": "Christopher Nolan",
+    "director": "Christopher Nolan",
+    "producer": "Emma Thomas, Christopher Nolan",
+    "cast": [
+      {
+        "character": "Tommy",
+        "actor": "Fionn Whitehead"
+      },
+      {
+        "character": "Commander Bolton",
+        "actor": "Kenneth Branagh"
+      },
+      {
+        "character": "Mr. Dawson",
+        "actor": "Mark Rylance"
+      },
+      {
+        "character": "Farrier",
+        "actor": "Tom Hardy"
+      },
+      {
+        "character": "Shivering Soldier",
+        "actor": "Cillian Murphy"
+      }
+    ]
+  }
+}
