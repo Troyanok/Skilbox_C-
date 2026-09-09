@@ -43,32 +43,32 @@ Window
             Button
             {
                 text: "⏪"
-                font.pixelSize: 20
-                Layout.preferredWidth: 45
+                font.pixelSize: 32
+                Layout.preferredWidth: 32
             }
             Button
             {
                 text: "▶"
-                font.pixelSize: 20
-                Layout.preferredWidth: 45
+                font.pixelSize: 32
+                Layout.preferredWidth: 32
             }
             Button
             {
                 text: "⏸"
-                font.pixelSize: 20
-                Layout.preferredWidth: 45
+                font.pixelSize: 32
+                Layout.preferredWidth: 32
             }
             Button
             {
                 text: "⏹"
-                font.pixelSize: 20
-                Layout.preferredWidth: 45
+                font.pixelSize: 32
+                Layout.preferredWidth: 32
             }
             Button
             {
                 text: "⏩"
-                font.pixelSize: 20
-                Layout.preferredWidth: 45
+                font.pixelSize: 32
+                Layout.preferredWidth: 32
             }
 
             ProgressBar
