@@ -7,7 +7,7 @@ Window {
     width: 480
     height: 240
     visible: true
-    title: qsTr("Calculator")
+    title: Графический калькулятор
 
     ColumnLayout
     {
