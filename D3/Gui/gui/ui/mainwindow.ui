@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>300</width><height>300</height></rect>
+  </property>
+  <property name="windowTitle"><string>Red Button</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item alignment="Qt::AlignCenter">
+     <widget class="QPushButton" name="pushButton">
+      <property name="minimumSize"><size><width>200</width><height>80</height></size></property>
+      <property name="maximumSize"><size><width>200</width><height>80</height></size></property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: red;
+    color: white;
+    border: 2px solid darkred;
+    border-radius: 10px;
+    font-size: 16px;
+}
+QPushButton:pressed {
+    background-color: darkred;
+    border-style: inset;
+}</string>
+      </property>
+      <property name="text"><string>Нажми меня</string></property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
